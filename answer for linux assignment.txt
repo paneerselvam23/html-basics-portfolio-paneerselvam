@@ -1,0 +1,66 @@
+
+# Linux Basics Assignment
+
+## SECTION 1 – Command Purposes and Examples
+
+| Command | Purpose | Example Usage |
+| :--- | :--- | :--- |
+| **1. pwd** | **P**rint **W**orking **D**irectory; shows the full path of the current directory. | `pwd` |
+| **2. ls** | Lists files and directories in the current path. | `ls -la` (shows hidden files) |
+| **3. cd** | **C**hange **D**irectory; used to navigate between folders. | `cd /var/log` |
+| **4. mkdir** | **M**ake **K**irectory; creates a new folder. | `mkdir project_folder` |
+| **5. rm -rf** | **R**emove **R**ecursively and **F**orcefully; deletes files/folders without asking. | `rm -rf old_data/` |
+| **6. ps -ef** | Displays every (**-e**) process currently running in full (**-f**) format. | `ps -ef \| grep nginx` |
+| **7. top** | Provides a real-time, dynamic view of running system processes and CPU/RAM usage. | `top` |
+| **8. df -h** | **D**isk **F**ree; shows available disk space in **H**uman-readable format (GB/MB). | `df -h` |
+| **9. history** | Displays a list of previously executed commands in the terminal session. | `history 10` (last 10 commands) |
+| **10. uptime** | Shows how long the system has been running, logged-in users, and load averages. | `uptime` |
+
+---
+
+## SECTION 2 – Linux Tasks (Commands)
+
+1.  **Create a directory:** `mkdir project-files`
+2.  **Navigate into it:** `cd project-files`
+3.  **Create a file using vi:** `vi notes.txt` (Press `i` to insert text, `Esc`, then `:wq` to save and exit)
+4.  **Display contents:** `cat notes.txt`
+5.  **Copy file:** `cp notes.txt backup.txt`
+6.  **First 100 lines of logs.txt:** `head -n 100 logs.txt`
+7.  **Last 100 lines of logs.txt:** `tail -n 100 logs.txt`
+8.  **Check disk storage:** `df -h`
+9.  **Check running processes:** `ps -ef` or `top`
+10. **Delete temp.txt:** `rm temp.txt`
+
+---
+
+## SECTION 3 – Concept Questions
+
+1. What is the difference between `>` and `>>` in Linux?**
+* `>` (Overwrite): Redirects output to a file, deleting existing content first.
+* `>>` (Append): Redirects output to a file, adding it to the end of the existing content.
+
+2. What is the purpose of the `kill -9` command?**
+It sends a `SIGKILL` signal to a process, forcing it to terminate immediately. This is used when a process is "stuck" and doesn't respond to a normal close request.
+
+3. What is the difference between `rm` and `rmdir`?**
+* `rmdir` can only delete **empty** directories.
+* `rm` (specifically `rm -r`) can delete files and directories containing files or sub-directories.
+
+4. What information does the `netstat -tulpn` command provide?**
+It shows active network connections and listening ports.
+* `-t` (TCP), `-u` (UDP), `-l` (Listening), `-p` (Process ID/Program name), `-n` (Numerical addresses).
+
+**5. What is the purpose of the `ping` command?**
+It tests the reachability of a host on an IP network and measures the round-trip time for messages sent from the local host to a destination computer.
+
+---
+
+## SECTION 4 – Scenario-based Questions
+
+1.  **Check current working directory:** `pwd`
+2.  **Create devops in home directory:** `mkdir ~/devops`
+3.  **Check high CPU usage:** `top` (then press `P` to sort by CPU)
+4.  **Check connection to google.com:** `ping google.com`
+5.  **View last 50 lines of application.log:** `tail -n 50 application.log`
+
+---
